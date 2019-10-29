@@ -1,0 +1,31 @@
+{
+  "name": "trabajo_cliente",
+  "version": "1.0.0",
+  "description": "Trabajo final de entorno cliente",
+  "main": "index.js",
+  "scripts": {
+    "arreglar-estilo": "npx eslint --fix ./src/",
+    "estilo": "npx eslint ./src/*",
+    "traducir": "npx babel src -d out",
+    "minimizar": "npx uglifyjs \"out/*\" --cm -o \"dest/archivo.min.js\"",
+    "build": "npm run arreglar-estilo && npm run estilo && npm run traducir && npm run minimizar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniluque/TrabajoCliente.git"
+  },
+  "author": "daniel, pablo y ricardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniluque/TrabajoCliente/issues"
+  },
+  "homepage": "https://github.com/daniluque/TrabajoCliente#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.6.0",
+    "jsdoc": "^3.6.3",
+    "uglify-js": "^3.6.5"
+  },
+  "dependencies": {}
+}
